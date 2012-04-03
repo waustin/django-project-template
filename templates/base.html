@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %} {{project_name}}</title>
+
+
+        <link rel="stylesheet" href="{{STATIC_URL}}css/reset.css" media="screen, projection"/>
+        <link rel="stylesheet" href="{{STATIC_URL}}css/print.css" media="print"/>
+        <!--[if lt IE 8]><link rel="stylesheet" href="{{STATIC_URL}}css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+        {% comment %} 
+            Link site specific js and css here
+        {% endcomment %}
+        {% block extra_head %}{% endblock%}
+    </head>
+    <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+        <h1>{{project_name}}</h1>
+        {% block content %}
+            <p>
+                Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, 
+                a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis 
+                dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. 
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+            </p>
+        {% endblock %}
+    </body>
+</html>

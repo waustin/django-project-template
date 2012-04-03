@@ -1,0 +1,191 @@
+/* RESET rules from Eric Meyer http://meyerweb.com/eric/tools/css/reset/  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*** BASIC TYPOGRAPHY RULES BORROWED FROM BLUEPRINT */
+/* Default font settings.
+The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+html { font-size:100.01%; }
+body {
+  font-size: 100%; /* 16px */
+  color: #222;
+  background: #fff;
+  font-family: "Helvetica Neue", Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111; }
+
+h1 { font-size: 2.5em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 1.9em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p { margin: 0 0 1.5em; line-height: 1.5; }
+/*
+These can be used to pull an image at the start of a paragraph, so
+that the text flows around it (usage: <p><img class="left">Text</p>)
+*/
+.left { float: left !important; }
+p .left { margin: 0em 1.5em 1.5em 0; padding: 0; }
+.right { float: right !important; }
+p .right { margin: 0em 0 1.5em 1.5em; padding: 0; }
+
+a:focus,
+a:hover { color: #09f; }
+a { color: #06c; text-decoration: underline; }
+
+blockquote { margin: 1.5em; color: #666; font-style: italic; }
+strong,dfn { font-weight: bold; }
+em,dfn { font-style: italic; }
+sup, sub { line-height: 0; }
+
+abbr,
+acronym { border-bottom: 1px dotted #666; }
+address { margin: 0 0 1.5em; font-style: italic; }
+del { color:#666; }
+
+pre { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul,
+li ol { margin: 0; }
+ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 1.5em; }
+
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+/*
+Because of the need for padding on TH and TD, the vertical rhythm
+on table cells has to be 27px, instead of the standard 18px or 36px
+of other elements.
+*/
+table { margin-bottom: 1.4em; width:100%;
+	border: 1px solid #C9C68F; 
+}
+th { font-weight: bold; }
+thead th { background: #E9E6AF; border-bottom: 1px solid #C9C68F; font-family: "Helvetica Neue", Verdana, Arial, Helvetica, sans-serif !important;}
+th,td,caption { padding: 10px 15px 10px 10px; }
+/*
+You can zebra-stripe your tables in outdated browsers by adding
+the class "even" to every other table row.
+*/
+tbody tr:nth-child(even) td,
+tbody tr.even td {
+  background: #E9E6AF;
+}
+tfoot { font-style: italic; }
+caption { background: #758053; font-size: 1.2em; font-weight: bold; color: white;
+	-webkit-text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+	-moz-text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+.small { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide { display: none; }
+
+.quiet { color: #666; }
+.loud { color: #000; }
+.highlight { background:#ff0; }
+.added { background:#060; color: #fff; }
+.removed { background:#900; color: #fff; }
+
+.first { margin-left:0; padding-left:0; }
+.last { margin-right:0; padding-right:0; }
+.top { margin-top:0; padding-top:0; }
+.bottom { margin-bottom:0; padding-bottom:0; }
+
+/* MISC STYLES, clears, etc. */
+/* Clearing floats without extra markup
+Based on How To Clear Floats Without Structural Markup by PiE
+[http://www.positioniseverything.net/easyclearing.html] */
+.clearfix:after, .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow:hidden;
+}
+.clearfix, .container {display: block;}
+
+/* Regular clearing
+apply to column that should drop below previous ones. */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
