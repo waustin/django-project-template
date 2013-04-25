@@ -1,2 +1,12 @@
 # PIP Requirements file
 # Install using $ pip install -r requirements.txt
+Django<1.5
+south
+django-debug-toolbar
+django-extensions
+coverage
+django-nose
+nose
+nose-exclude
+pytz
+MySQL-python

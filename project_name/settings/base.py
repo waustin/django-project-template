@@ -14,6 +14,8 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+
+
 MANAGERS = ADMINS
 
 # Local time zone for this installation. Choices can be found here:
