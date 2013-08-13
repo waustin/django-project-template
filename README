@@ -12,4 +12,5 @@ Features:
     manage_dev.py - shortcut for development that point DJANGO_SETTINGS_MODULE to the settings.dev module
 
 
-
+Add a .env file with your DJANGO_SETTINGS_MODULE and PYTHONPATH.
+.env should not be checked into source control. There is a .gitignore rule to block it.
