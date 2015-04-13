@@ -1,25 +1,6 @@
-@import "base";
-
-a {
-    color: $LINK_COLOR;
-    &:hover { color: darken($LINK_COLOR, 20%); }
-}
-
-.wrapper {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    width: 94%;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1400px;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a {
-    text-decoration: none;
-}
+@import "partials/base";
 
 
 
+
+@import "partials/form";

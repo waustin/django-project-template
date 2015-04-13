@@ -41,22 +41,3 @@ body {
 .container {
 	width: 960px !important;
 }
-
-
-#AudienceNav {
-	a {
-		color: black !important;
-	}
-}
-
-.home-page {
-
-	#AudienceNav {
-		li:hover {
-			p {
-				display: none !important;
-			}
-		}
-	}
-}
-
