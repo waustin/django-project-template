@@ -28,9 +28,12 @@ header, footer, nav, aside, article, section {
     display: block;
 }
 
-img, object, video, media, embed, iframe {
+img, object, video, media, embed {
     max-width: 100%;
     height: auto;
+}
+iframe {
+    max-width: 100%;
 }
 
 .wrapper {
