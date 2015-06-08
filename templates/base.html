@@ -43,6 +43,10 @@
                     </p>
             </div>
         <![endif]-->
-        {% block content %}{% endblock content %}
+        <main id="site-main" role="main">
+            <div class="main-content-wrapper {% block main_content_class %}{% endblock main_content_class %}">
+                {% block main_content %}{% endblock main_content %}
+            </div>
+        </main>
     </body>
 </html>

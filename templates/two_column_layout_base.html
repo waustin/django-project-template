@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main_content_class %}two-column-layout{% endblock main_content_class %}
+
+{% block main_content %}
+    <div class="main-column">
+        {% block content %}{% endblock content %}
+    </div>
+    <div class="sidebar">
+        <p>sidebar</p>
+        {% block sidebar %}{% endblock sidebar %}
+    </div>
+{% endblock main_content %}
