@@ -1,0 +1,19 @@
+<nav class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a class="prev" href="?page={{  page_obj.previous_page_number }}{%if query %}&amp;q={{query}}{% endif %}"><i class="fa fa-angle-left"></i>&nbsp;previous</a>
+        {% else %}
+            <span class="prev disabled">&laquo;&nbsp;Previous</span>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a class="next" href="?page={{  page_obj.next_page_number }}{%if query %}&amp;q={{query}}{% endif %}">next&nbsp;<i class="fa fa-angle-right"></i></a>
+        {% else %}
+            <span class="next disabled">next&nbsp;&raquo;</span>
+        {% endif %}
+    </span>
+</nav>

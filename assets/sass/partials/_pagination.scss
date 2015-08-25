@@ -1,0 +1,33 @@
+.pagination {
+	@include clearfix();
+	margin: 40px 0 40px 0;
+	text-align: center;
+
+	a, .next, .prev {
+		margin-right: 10px;
+		@include button($PRIMARY_BUTTON_BACKROUND_COLOR, $PRIMARY_BUTTON_TXT_COLOR);
+		max-width: 130px;
+	}
+	.next {
+		float: right;
+		i {
+			margin-left: 10px;
+		}
+	}
+	.prev {
+		float: left;
+		i {
+			margin-right: 10px;
+		}
+	}
+	.disabled {
+		@include opacity(0.0);
+	}
+	.current {
+		font-weight: normal;
+		@include font-size(1.4);
+		text-transform: uppercase;
+		display: none;
+	}
+
+}
