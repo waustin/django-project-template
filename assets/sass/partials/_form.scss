@@ -1,22 +1,54 @@
 label {
 	color: black;
+    display: block;
+    margin-bottom: 5px;
+    @include font-size(1.4);
+    text-transform: uppercaes;
+    font-weight: bold;
 }
-input[type=text] {
-	border: 1px solid black;
+
+input[type=text], input[type=email], input[type=number],
+input[type=password], textarea {
+	border: 1px solid $MEDIUM_GREY;
 	background-color: white;
-	font-size: 1.15em;
+	@include font-size(1.6);
 	padding: 5px 5px;
-	color: black;
-	@include border-radius(5px);
+	color: $TXT_COLOR;
+	@include border-radius($border_radius);
 	&:focus {
-		background-color: yellow;
+		background-color: lighten(yellow, 30%);
 		outline: none;
 	}
 }
-
-button, input[type=submit], .button {
-    @include button(green, white);
+select {
+    border: 1px solid $MEDIUM_GREY;
+    @include font-size(1.6);
+    width: 100%;
     &:focus {
         outline: none;
+    }
+}
+
+button, input[type=submit], .button {
+    @include button($PRIMARY_BUTTON_BACKGROUND_COLOR, $PRIMARY_BUTTON_TXT_COLOR);
+    &:focus {
+        outline: none;
+    }
+}
+
+// CRISPY FORM BOOTSTRAP STYLES - might need to be adjusted
+form {
+    .form-group {
+        .help-block {
+            display: block;
+            margin-top: 5px;
+        }
+        &:has-error {
+            border: 2px solid $ERROR_COLOR;
+            padding: 7px 5px;
+            .help-block {
+                color: $ERROR_COLOR;
+            }
+        }
     }
 }

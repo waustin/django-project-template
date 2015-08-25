@@ -2,6 +2,8 @@
 @import "compass/typography/lists";
 @import "compass/css3";
 
+$border-radius: 4px;
+
 @import "modules/colors";
 @import "modules/fonts";
 @import "modules/shadows";
@@ -22,6 +24,7 @@ body {
     @include font-size(1.6);
     min-width: 240px;
 	font-family: $SANS_SERIF_FONT_STACK;
+    color: $TXT_COLOR;
 }
 
 header, footer, nav, aside, article, section {
@@ -36,24 +39,13 @@ iframe {
     max-width: 100%;
 }
 
-.wrapper {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-.container {
-    width: 94%;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1400px;
-}
-
 a {
     color: $LINK_COLOR;
     &:hover { color: darken($LINK_COLOR, 20%); }
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     @include heading-font();
+    color: $TXT_COLOR;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a {
     text-decoration: none;

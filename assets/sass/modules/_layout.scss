@@ -8,13 +8,10 @@ $WRAPPER_PADDING: 6%;
 %sidebar {
     position: relative;
 	float: left;
-	width: 20%;
-	margin-right: 4%;
+	width: 28%;
+	margin-right: 12%;
     min-height: 1px; // prevent horizontal collapse
-	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
-		margin-right: 8%;
-		width: 30%;
-	}
+
 	@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
 		width: auto;
 		float: none;
@@ -27,11 +24,8 @@ $WRAPPER_PADDING: 6%;
 }
 %main-column {
 	float: left;
-	width: 76%;
+	width: 60%;
     min-height: 1px; // prevent horizontal collapse
-	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
-		width: 62%;
-	}
 	@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
 		width: auto;
 		float: none;
@@ -40,6 +34,7 @@ $WRAPPER_PADDING: 6%;
 
 // 2 column layout class
 .two-column-layout {
+    @include clearfix();
 	.sidebar {
 		@extend %sidebar;
 	}
