@@ -1,5 +1,29 @@
 @import "partials/base";
 
+.page-header {
+    @extend %wrapper;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.main-content-wrapper {
+    @extend %wrapper;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include respond-to("min-width: " + $SMALL_SCREEN_WIDTH) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include respond-to("min-width: " + $MEDIUM_SCREEN_WIDTH) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include respond-to("min-width: " + $LARGE_SCREEN_WIDTH) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
 .sub-nav {
     margin-left: auto;
     margin-right: auto;
@@ -26,6 +50,10 @@
 }
 
 .main-footer {
+    @extend %wrapper;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid $MEDIUM_GREY;
     .copyright {
         @include font-size(1.1);
         margin-bottom: 0;

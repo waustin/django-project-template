@@ -16,18 +16,18 @@
         <!--[if lt IE 8]><link rel="stylesheet" href="{% static 'css/ie.css' %}" type="text/css" media="screen, projection"><![endif]-->
 
         <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen, projection"/>
-        
+
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-        <!--[if (gte IE 6)&(lte IE 8)]>
+         <!--[if (gte IE 6)&(lte IE 8)]>
                 <script type="text/javascript" src="{% static 'js/selectivizr-min.js' %}"></script>
                 <script type="text/javascript" src="{% static 'js/respond.min.js' %}"></script>
         <![endif]-->
 
         <script src="{% static 'js/modernizr.custom.74326.js' %}"></script>
 
-        {% comment %} 
+        {% comment %}
             Link site specific js and css here
         {% endcomment %}
         {% block extra_head %}{% endblock extra_head %}
@@ -37,16 +37,23 @@
         <!--[if lt IE 8]>
             <div class="chromeframe">
                     <p>Hi. It looks like you're using an older browser.<br/>
-                    Please <a href="http://browsehappy.com/">upgrade your browser</a> 
-                    or <a href="http://www.google.com/chromeframe/?redirect=true">activate 
+                    Please <a href="http://browsehappy.com/">upgrade your browser</a>
+                    or <a href="http://www.google.com/chromeframe/?redirect=true">activate
                         Google Chrome Frame</a> to improve your experience.
                     </p>
             </div>
         <![endif]-->
         <main id="site-main" role="main">
+            <header class="page-header" style="{% block page_header_style %}{% endblock page_header_style %}">
+                {% block page_header %}{% endblock page_header %}
+            </header>
+
             <div class="main-content-wrapper {% block main_content_class %}{% endblock main_content_class %}">
                 {% block main_content %}{% endblock main_content %}
             </div>
         </main>
+        <footer class="main-footer">
+            <p class="copyright">&copy;{% now "Y" %} All Rights Reserverd.</p>
+        </footer>
     </body>
 </html>

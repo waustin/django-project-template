@@ -5,7 +5,7 @@
 
 	a, .next, .prev {
 		margin-right: 10px;
-		@include button($PRIMARY_BUTTON_BACKROUND_COLOR, $PRIMARY_BUTTON_TXT_COLOR);
+		@include button($PRIMARY_BUTTON_BACKGROUND_COLOR, $PRIMARY_BUTTON_TXT_COLOR);
 		max-width: 130px;
 	}
 	.next {

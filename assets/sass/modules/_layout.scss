@@ -9,13 +9,13 @@ $WRAPPER_PADDING: 6%;
     position: relative;
 	float: left;
 	width: 28%;
-	margin-right: 12%;
+	margin-left: 12%;
     min-height: 1px; // prevent horizontal collapse
 
 	@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
 		width: auto;
 		float: none;
-		margin-right: 0;
+		margin-left: 0;
 		margin-bottom: 30px;
 		padding-bottom: 30px;
 		border-bottom: 1px solid $LIGHT_GREY;
