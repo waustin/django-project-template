@@ -1,7 +1,6 @@
 from base import *
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 # CACHE CONFIG
 CACHES = {

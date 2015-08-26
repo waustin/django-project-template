@@ -27,8 +27,7 @@ MANAGERS = ADMINS
 SECRET_KEY = '{{ secret_key }}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
